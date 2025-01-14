@@ -1,18 +1,39 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
-    [SerializeField] float hitPoints = 100f;
+    [SerializeField] float maxHealth = 100f;       // Düþmanýn maksimum saðlýðý
+    private float currentHealth;                  // Düþmanýn mevcut saðlýðý
+    [SerializeField] AudioClip deathSound;        // Ölüm sesi
+    [SerializeField] float deathSoundVolume = 0.7f; // Ses seviyesi
 
-    public void Getdamage (float damage)
+    void Start()
     {
-        hitPoints -= damage;
-        if (hitPoints <= 0)
+        currentHealth = maxHealth;
+    }
+
+    public void Getdamage(float damageAmount)
+    {
+        currentHealth -= damageAmount;
+        Debug.Log(gameObject.name + " took " + damageAmount + " damage.");
+
+        if (currentHealth <= 0)
         {
-            Destroy(gameObject);
+            Die();
+        }
+    }
+
+    private void Die()
+    {
+        Debug.Log(gameObject.name + " has died!");
+
+        // Ölüm sesi çal
+        if (deathSound != null)
+        {
+            AudioSource.PlayClipAtPoint(deathSound, transform.position, deathSoundVolume);
         }
 
+        // Nesneyi yok et
+        Destroy(gameObject);
     }
 }

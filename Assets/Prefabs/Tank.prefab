@@ -103,7 +103,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   chasingRadius: 15
-  animatorController: {fileID: 9100000, guid: e016d10542ada0049b0744e9b7eebfb3, type: 2}
+  attackEffectPrefab: {fileID: 100006, guid: 93485fd5fc2ccf2439cb3239186f6382, type: 3}
+  effectSpawnPoint: {fileID: 3490396924122154061}
+  attackDamage: 100
 --- !u!114 &3429603493289151650
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -116,7 +118,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e92d5b343ecc7b34f8bea72647bc08dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPoints: 500
+  maxHealth: 100
+  deathSound: {fileID: 8300000, guid: 3315609751f142041b3c9c5cc70a5c5b, type: 3}
+  deathSoundVolume: 80
 --- !u!136 &7684238011638974895
 CapsuleCollider:
   m_ObjectHideFlags: 0
