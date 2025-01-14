@@ -126,7 +126,7 @@ NavMeshAgent:
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 2
+  m_StoppingDistance: 3.5
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -160,7 +160,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  chasingRadius: 4
+  chasingRadius: 6
+  animatorController: {fileID: 9100000, guid: d6fffe7cbdccb20439b47a4d807f720f, type: 2}
 --- !u!95 &-2749840319617189461
 Animator:
   serializedVersion: 5

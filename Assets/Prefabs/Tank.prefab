@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3429603493289151650}
   - component: {fileID: 7684238011638974895}
   - component: {fileID: 5876883001891627579}
+  - component: {fileID: 5822090915692232606}
   m_Layer: 0
   m_Name: Tank
   m_TagString: Untagged
@@ -30,7 +31,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6779613616139672263}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 8.947423, y: 7.0498652, z: -10.163879}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -101,7 +102,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  chasingRadius: 6
+  chasingRadius: 15
+  animatorController: {fileID: 9100000, guid: e016d10542ada0049b0744e9b7eebfb3, type: 2}
 --- !u!114 &3429603493289151650
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -160,6 +162,27 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!95 &5822090915692232606
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6779613616139672263}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e016d10542ada0049b0744e9b7eebfb3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &8624492539196974061
 GameObject:
   m_ObjectHideFlags: 0

@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2250880369362635511}
   - component: {fileID: 7118268646047773714}
   - component: {fileID: 8458345776149216706}
+  - component: {fileID: 1075762016978282536}
   m_Layer: 0
   m_Name: SpeedEnemy
   m_TagString: Untagged
@@ -32,7 +33,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.375, y: 0.922, z: 0.861}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.53154, y: 0.53154, z: 0.53154}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6653581226057646138}
@@ -66,7 +67,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 474708941896053489ebef914582292d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -124,7 +125,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  chasingRadius: 6
+  chasingRadius: 10
+  animatorController: {fileID: 9100000, guid: 6e2f1a900490786498727a2fdea896fb, type: 2}
 --- !u!114 &7118268646047773714
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -148,7 +150,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 5
+  m_Speed: 10
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -160,6 +162,27 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!95 &1075762016978282536
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3464447621670897448}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6e2f1a900490786498727a2fdea896fb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &7310180427781949446
 GameObject:
   m_ObjectHideFlags: 0
@@ -222,7 +245,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 474708941896053489ebef914582292d, type: 2}
+  - {fileID: 2100000, guid: a5f716ea14489b9458ea40d268d02cea, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
